@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <string>
+#include <iostream>
 
 std::string uidgen() {
   std::string uid = "1.4.444.90004.223.";
