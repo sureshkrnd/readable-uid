@@ -13,13 +13,13 @@ bool uid_split( std::string uid ) {
   std::size_t pos_2 = 0;
   std::string delimiter = ".";
   std::uint8_t i = 0;
-  std::cout<<uid<<endl;
+  std::cout<<uid<<"\n";
   
   while ((pos_2 = uid.find(delimiter, pos_1)) != std::string::npos)
   {
     result[i] = uid.substr(pos_1, pos_2);
     pos_1 = pos_2 + 1;
-    std::cout<<result[i]<<endl;
+    std::cout<<result[i]<<"\n";
     i += 1;
     if( result[i].length() > 5 )
       return false;
