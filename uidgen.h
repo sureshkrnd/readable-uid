@@ -20,7 +20,7 @@ bool uid_split( std::string uid ) {
   {
 //     if( pos_2 >= 0 )
 //     {
-    result[i] = uid.substr(pos_1, pos_2);
+    result[i] = uid.substr(pos_1, (pos_2 - pos_1));
     std::cout<<pos_1<<"\t"<<pos_2<<"\n";
     pos_1 = pos_2 + 1;
     std::cout<<result[i]<<"\n";
