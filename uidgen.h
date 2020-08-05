@@ -7,16 +7,18 @@ std::string uidgen() {
   return uid + std::to_string(suffix);
 }
 
-std::string uid_split( std::string uid ) {
+bool uid_split( std::string uid ) {
   std::string result[10];
   std::size_t pos_1 = 0;
   std::size_t pos_2 = 0;
   std::string delimiter = ".";
+  std::uint8_t i = 0;
   
   while ((pos_2 = uid.find(delimiter, pos_1)) != std::string::npos)
   {
     result[i] = uid.substr(pos_1, pos_2);
     pos_1 = pos_2 + 1;
+    i += 1;
     if( result[i].length() > 5 )
       return false;
   } 
