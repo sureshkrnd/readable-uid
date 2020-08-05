@@ -10,8 +10,8 @@ std::string uidgen() {
 
 bool uid_split( std::string uid ) {
   std::string result[10];
-  static std::size_t pos_1 = 0;
-  static std::size_t pos_2 = 0;
+  std::size_t pos_1 = 0;
+  std::size_t pos_2 = 0;
   std::string delimiter = ".";
   std::uint16_t i = 0;
   std::cout<<uid<<"\n";
