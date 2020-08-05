@@ -1,7 +1,5 @@
 #include <cstdlib>
-// #include <string>
-#include <bits/stdc++.h> 
-#include <boost/algorithm/string.hpp> 
+#include <string>
 
 std::string uidgen() {
   std::string uid = "1.4.444.90004.223.";
@@ -10,11 +8,15 @@ std::string uidgen() {
 }
 
 std::string uid_split( std::string uid ) {
-  vector<string> result; 
-  boost::split(result, uid, boost::is_any_of(".")); 
+  vector<string> result;
+  size_t pos_1 = 0;
+  size_t pos_2 = 0;
+  std::string delimiter = ".";
   
-  for (int i = 0; i < result.size(); i++)
+  while ((pos_2 = uid.find(delimiter, pos_1)) != std::string::npos)
   {
+    result[i] = uid.substr(pos_1, pos_2);
+    pos_1 = pos_2 + 1;
     if( result[i].length() > 5 )
       return False;
   } 
