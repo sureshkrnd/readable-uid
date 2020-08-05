@@ -18,8 +18,6 @@ bool uid_split( std::string uid ) {
   
   while ((pos_2 = uid.find(delimiter, pos_1)) != std::string::npos)
   {
-//     if( pos_2 >= 0 )
-//     {
     result[i] = uid.substr(pos_1, (pos_2 - pos_1));
     std::cout<<pos_1<<"\t"<<pos_2<<"\n";
     pos_1 = pos_2 + 1;
@@ -27,7 +25,9 @@ bool uid_split( std::string uid ) {
     i += 1;
     if( result[i].length() > 5 )
       return false;
-//     }
   } 
+  result[i] = uid.substr(pos_2+1);
+  if(result[i].lenth() > 5)
+    return false;
     return true; 
 }
