@@ -10,10 +10,10 @@ std::string uidgen() {
 
 bool uid_split( std::string uid ) {
   std::string result[10];
-  std::size_t pos_1 = 0;
-  std::size_t pos_2 = 0;
+  static std::size_t pos_1 = 0;
+  static std::size_t pos_2 = 0;
   std::string delimiter = ".";
-  std::uint8_t i = 0;
+  std::uint16_t i = 0;
   std::cout<<uid<<"\n";
   
   while ((pos_2 = uid.find(delimiter, pos_1)) != std::string::npos)
@@ -27,7 +27,7 @@ bool uid_split( std::string uid ) {
     i += 1;
   } 
   result[i] = uid.substr(pos_2+1);
-  std::cout<<i<<"\n"<<pos_2;
+  std::cout<<i<<"\n"<<pos_2<<"\n";
   if(result[i].length() > 5)
   {
     return false;
