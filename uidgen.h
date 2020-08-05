@@ -8,9 +8,9 @@ std::string uidgen() {
 }
 
 std::string uid_split( std::string uid ) {
-  vector<string> result;
-  size_t pos_1 = 0;
-  size_t pos_2 = 0;
+  static std::vector<std::string> result;
+  std::size_t pos_1 = 0;
+  std::size_t pos_2 = 0;
   std::string delimiter = ".";
   
   while ((pos_2 = uid.find(delimiter, pos_1)) != std::string::npos)
