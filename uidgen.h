@@ -8,7 +8,7 @@ std::string uidgen() {
 }
 
 std::string uid_split( std::string uid ) {
-  static std::vector<std::string> result;
+  std::string result[10];
   std::size_t pos_1 = 0;
   std::size_t pos_2 = 0;
   std::string delimiter = ".";
@@ -18,7 +18,7 @@ std::string uid_split( std::string uid ) {
     result[i] = uid.substr(pos_1, pos_2);
     pos_1 = pos_2 + 1;
     if( result[i].length() > 5 )
-      return False;
+      return false;
   } 
-    return True; 
+    return true; 
 }
