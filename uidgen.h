@@ -22,9 +22,9 @@ bool uid_split( std::string uid ) {
     std::cout<<pos_1<<"\t"<<pos_2<<"\n";
     pos_1 = pos_2 + 1;
     std::cout<<result[i]<<"\n";
-    i += 1;
     if( result[i].length() > 5 )
       return false;
+    i += 1;
   } 
   result[i] = uid.substr(pos_2+1);
   std::cout<<i<<"\n"<<pos_2;
