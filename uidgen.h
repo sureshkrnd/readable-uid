@@ -26,8 +26,8 @@ bool uid_split( std::string uid ) {
     if( result[i].length() > 5 )
       return false;
   } 
-  result[i] = uid.substr(pos_2+1,5);
-  std::cout<<result[i];
+  result[i] = uid.substr(pos_2+1);
+  std::cout<<result[i]<<"\n"<<pos_2;
   if(result[i].length() > 5)
   {
     return false;
