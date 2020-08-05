@@ -12,7 +12,7 @@ TEST(UID, UID_is_generated_within_length_limit) {
 TEST(UID, UID_is_generated_split_is_not_more_than_5_digits) {
   std::string uid = uidgen();
   bool uid_flag = uid_split(uid);
-  ASSERT_EQ(uid_flag, True );
+  ASSERT_EQ(uid_flag, true );
 }
 
 
