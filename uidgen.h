@@ -9,7 +9,7 @@ std::string uidgen() {
   return uid + std::to_string(suffix);
 }
 
-std::string uid( std::string uid ) {
+std::string uid_split( std::string uid ) {
   vector<string> result; 
   boost::split(result, uid, boost::is_any_of(".")); 
   
