@@ -6,7 +6,7 @@
 TEST(UID, UID_is_generated_within_length_limit) {
   std::string uid = uidgen();
   std::cout<<uid;
-  ASSERT_TRUE(uid.length() < 0);
+  ASSERT_TRUE(uid.length() > 0);
 }
 
 
